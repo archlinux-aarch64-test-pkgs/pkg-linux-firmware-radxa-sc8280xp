@@ -1,0 +1,6 @@
+/src
+/pkg
+*.zst
+*.gz
+*.pkg.tar.*
+/linux-firmware-radxa-sc8280xp
