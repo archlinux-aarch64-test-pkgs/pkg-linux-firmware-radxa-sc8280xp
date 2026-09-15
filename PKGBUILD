@@ -1,5 +1,5 @@
 pkgname=linux-firmware-radxa-sc8280xp
-pkgver=0.1
+pkgver=0.r4.gf1d257f
 pkgrel=1
 pkgdesc="Firmware files for Radxa SC8280XP devices"
 arch=('any')
@@ -7,13 +7,8 @@ url="https://github.com/strongtz/linux-firmware-radxa-sc8280xp"
 license=('unknown')
 makedepends=('git')
 options=('!strip' '!debug')
-source=("${pkgname}::git+${url}.git#branch=main")
+source=("${pkgname}::git+${url}.git#commit=f1d257f462115ef6918207f38d02af91cc825802")
 sha256sums=('SKIP')
-
-pkgver() {
-  cd "$pkgname"
-  printf '0.r%s.g%s' "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
-}
 
 package() {
   cd "$pkgname"
